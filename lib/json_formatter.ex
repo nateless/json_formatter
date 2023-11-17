@@ -2,7 +2,7 @@ defmodule JsonFormatter do
   def format(level, message, ts, metadata) do
     try do
       log =
-        LogParams.encode(ts, level, message, metadata)
+        JsonFormatter.LogParams.encode(ts, level, message, metadata)
         |> Jason.encode!()
 
       log <> "\n"
