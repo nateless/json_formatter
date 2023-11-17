@@ -1,4 +1,4 @@
-defmodule Stacktrace do
+defmodule JsonFormatter.Stacktrace do
   def format(stacktrace) when is_list(stacktrace) do
     for i <- stacktrace, do: i |> format_entry()
   end

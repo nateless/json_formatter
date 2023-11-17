@@ -1,4 +1,6 @@
-defmodule LogParams do
+defmodule JsonFormatter.LogParams do
+  alias JsonFormatter.Stacktrace
+
   @default_metadata_keys ~w[
     application
     module
